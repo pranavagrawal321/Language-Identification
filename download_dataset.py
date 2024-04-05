@@ -2,7 +2,7 @@ import os
 import languages
 import zipfile
 
-os.environ["KAGGLE_CONFIG_DIR"] = "/home/online/language_detection/"
+os.environ["KAGGLE_CONFIG_DIR"] = "/mnt/data/language_detection/"
 
 data = languages.languages
 test = data["Hindi"]["command"]
