@@ -2,7 +2,7 @@ import os
 import languages
 import zipfile
 
-os.environ["KAGGLE_CONFIG_DIR"] = "/mnt/data/APIs"
+os.environ["KAGGLE_CONFIG_DIR"] = "/home/online/language_detection/"
 
 data = languages.languages
 test = data["Hindi"]["command"]
@@ -27,7 +27,7 @@ for i, j in data.items():
 
         os.system(f"cd datasets && {command}")
         os.rename(f"datasets/{file_name}", f"datasets/{language}.zip")
-        os.system(f"cd datasets && unzip {language}.zip -d {language} && rm {language}.zip")
+        os.system(f"cd datasets && unzip {language}.zip -d {language}")
 
     elif platform == "wget":
         file_name = command.split("/")[-1]
