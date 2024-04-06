@@ -50,7 +50,7 @@ languages = {
     },
     "Marathi": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/marathi-news-dataset"
+        "command": "kaggle datasets download -d disisbig/marathi-wikipedia-articles"
     },
     "Meiti": {
 
