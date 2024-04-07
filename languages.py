@@ -61,7 +61,7 @@ languages = {
     },
     "Odia": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/odia-news-dataset"
+        "command": "kaggle datasets download -d disisbig/odia-wikipedia-articles"
     },
     "Punjabi": {
         "platform": "kaggle",
