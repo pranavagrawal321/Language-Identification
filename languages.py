@@ -1,8 +1,4 @@
 languages = {
-    "Multilang": {
-        "platform": "wget",
-        "command": "https://storage.googleapis.com/ai4bharat-public-indic-nlp-corpora/evaluations/classification/indicnlp-news-articles.tgz"
-    },
     "Assamese": {
         "platform": "kaggle",
         "command": "kaggle datasets download -d krishnabhdas/assamese-news-article-dataset",
@@ -88,6 +84,6 @@ languages = {
     },
     "Urdu": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d saurabhshahane/urdu-news-dataset"
+        "command": "kaggle datasets download -d akkefa/imdb-dataset-of-50k-movie-translated-urdu-reviews"
     }
 }
