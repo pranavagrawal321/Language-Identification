@@ -1,21 +1,28 @@
 import os
-import languages
 import zipfile
+import languages
+import argparse
 
 os.environ["KAGGLE_CONFIG_DIR"] = "/mnt/data/language_detection/"
 
 data = languages.languages
-test = data["Hindi"]["command"]
 
 os.makedirs("datasets", exist_ok=True)
 
-for i, j in data.items():
-    language = i
-    try:
-        command = j["command"]
-        platform = j["platform"]
-    except KeyError:
-        command, platform = None, None
+parser = argparse.ArgumentParser(description="Download language datasets")
+parser.add_argument("-l", "--language", help="Specify a language to download")
+args = parser.parse_args()
+
+languages_to_download = args.language.split(",") if args.language else data.keys()
+
+for language in languages_to_download:
+    info = data.get(language)
+    if info is None:
+        print(f"Language '{language}' not found in the language list.")
+        continue
+
+    platform = info.get("platform")
+    command = info.get("command")
 
     print("\nDOWNLOADING", language, "\n")
 
