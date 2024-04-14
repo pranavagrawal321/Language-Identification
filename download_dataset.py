@@ -27,7 +27,7 @@ for i, j in data.items():
 
         os.system(f"cd datasets && {command}")
         os.rename(f"datasets/{file_name}", f"datasets/{language}.zip")
-        os.system(f"cd datasets && unzip {language}.zip -d {language}")
+        os.system(f"cd datasets && unzip {language}.zip -d {language} && rm {language}.zip")
 
     elif platform == "wget":
         file_name = command.split("/")[-1]
