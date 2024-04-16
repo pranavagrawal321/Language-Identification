@@ -16,7 +16,7 @@ languages = {
     },
     "English": {
         "platform": "kaggle",
-        "command": "kaggle competitions download -c feedback-prize-english-language-learning"
+        "command": "kaggle datasets download -d mikeortman/wikipedia-sentences"
     },
     "Gujarati": {
         "platform": "kaggle",
