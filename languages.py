@@ -7,10 +7,6 @@ languages = {
         "platform": "kaggle",
         "command": "kaggle datasets download -d rezwanrahin/bangla-text-dataset"
     },
-    "Bodo": {
-        "platform": "kaggle",
-        "command": "kaggle datasets download -d jigarpanjiyar/english-to-bodo-dataset"
-    },
     "English": {
         "platform": "kaggle",
         "command": "kaggle datasets download -d mikeortman/wikipedia-sentences"
@@ -51,8 +47,4 @@ languages = {
         "platform": "kaggle",
         "command": "kaggle datasets download -d sudalairajkumar/telugu-nlp"
     },
-    "Urdu": {
-        "platform": "kaggle",
-        "command": "kaggle datasets download -d akkefa/imdb-dataset-of-50k-movie-translated-urdu-reviews"
-    }
 }
