@@ -3,7 +3,7 @@ import zipfile
 import languages
 import argparse
 
-os.environ["KAGGLE_CONFIG_DIR"] = "/mnt/data/language_detection/"
+os.environ["KAGGLE_CONFIG_DIR"] = "/home/online/language_detection/"
 
 data = languages.languages
 
