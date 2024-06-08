@@ -1,9 +1,8 @@
 import os
-import zipfile
 import languages
 import argparse
 
-os.environ["KAGGLE_CONFIG_DIR"] = "/home/online/language_detection/"
+os.environ["KAGGLE_CONFIG_DIR"] = "/mnt/data/language_detection"
 
 data = languages.languages
 
@@ -27,7 +26,9 @@ for language in languages_to_download:
     print("\nDOWNLOADING", language, "\n")
 
     if platform == "kaggle":
-        if "/" in command:
+        if " -f " in command:
+            file_name = command.split(" -f ")[-1] + ".zip"
+        elif "/" in command:
             file_name = command.split("/")[-1] + ".zip"
         else:
             file_name = command.split(" ")[-1] + ".zip"

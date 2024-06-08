@@ -5,15 +5,15 @@ languages = {
     },
     "Bengali": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d rezwanrahin/bangla-text-dataset"
+        "command": "kaggle datasets download -d furcifer/bangla-newspaper-dataset"
     },
     "English": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d mikeortman/wikipedia-sentences"
+        "command": "kaggle datasets download -d allen-institute-for-ai/CORD-19-research-challenge -f metadata.csv"
     },
     "Gujarati": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/gujarati-wikipedia-articles"
+        "command": "kaggle datasets download -d deekoul/indian-language-summarization -f Guj_train.csv"
     },
     "Hindi": {
         "platform": "kaggle",
@@ -21,30 +21,22 @@ languages = {
     },
     "Kannada": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d shravanc/kannada-covid19-sentiment-analysis-dataset"
-    },
-    "Kashmiri": {
-        "platform": "wget",
-        "command": "https://raw.githubusercontent.com/mzmmoazam/kashmiri_dataset/master/csv_files/kashmir_language_text.csv"
+        "command": "kaggle datasets download -d disisbig/kannada-news-dataset"
     },
     "Malayalam": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/malayalam-wikipedia-articles"
+        "command": "kaggle datasets download -d akhisreelibra/malayalam-news"
     },
     "Odia": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/odia-wikipedia-articles"
-    },
-    "Punjabi": {
-        "platform": "kaggle",
-        "command": "kaggle datasets download -d disisbig/punjabi-news-dataset"
+        "command": "kaggle datasets download -d disisbig/odia-news-dataset"
     },
     "Tamil": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d sudalairajkumar/tamil-nlp"
+        "command": "kaggle datasets download -d vijayabhaskar96/tamil-news-classification-dataset-tamilmurasu"
     },
     "Telugu": {
         "platform": "kaggle",
-        "command": "kaggle datasets download -d sudalairajkumar/telugu-nlp"
+        "command": "kaggle datasets download -d shubhamjain27/telugu-news-dataset"
     },
 }
