@@ -7,3 +7,4 @@ logs
 final
 .ipynb_checkpoints
 *.csv
+models

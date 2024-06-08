@@ -2,3 +2,5 @@ pandas
 kaggle
 pyarrow
 fastparquet
+fasttext-wheel
+streamlit
