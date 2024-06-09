@@ -1,6 +1,8 @@
+import logging
 import os
 import languages
 import argparse
+import utils
 
 
 def download_language_datasets():
@@ -18,13 +20,13 @@ def download_language_datasets():
     for language in languages_to_download:
         info = data.get(language)
         if info is None:
-            print(f"Language '{language}' not found in the language list.")
+            utils.writeLog(f"Language '{language}' not found in the language list.", logging.ERROR)
             continue
 
         platform = info.get("platform")
         command = info.get("command")
 
-        print("\nDOWNLOADING", language, "\n")
+        utils.writeLog(f"DOWNLOADING {language}", logging.INFO)
 
         if platform == "kaggle":
             if " -f " in command:
@@ -45,13 +47,13 @@ def download_language_datasets():
             os.rename(f"datasets/{file_name}", f"datasets/{language}.{extension}")
 
             if extension == "zip":
-                print(f"Unzipping... {file_name}")
+                utils.writeLog(f"Unzipping {file_name}", logging.INFO)
                 os.system(f"cd datasets && unzip {language}.zip -d {language} && rm {language}.zip")
             elif extension == "tgz":
-                print(f"Unzipping... {language}")
+                utils.writeLog(f"Unzipping {language}", logging.INFO)
                 os.system(f"cd datasets && mkdir {language} && cd {language} && tar -xvzf ../{language}.tgz && rm ../{language}.tgz")
 
-        print("\nDONE", language, "\n")
+        utils.writeLog(f"DONE {language}", logging.INFO)
 
 
 def main():

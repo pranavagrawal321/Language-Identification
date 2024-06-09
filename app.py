@@ -9,10 +9,8 @@ def get_predictions(text):
 
 def on_submit():
     result = get_predictions(text)
-    st.write("Predicted language:", result)
+    st.write("Predicted language:", result.split("__")[-1])
 
-
-st.set_page_config(layout="wide")
 
 st.title("Language Identification")
 

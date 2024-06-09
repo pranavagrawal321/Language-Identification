@@ -2,8 +2,6 @@ import pandas as pd
 import os
 import logging
 import logging.handlers
-import sys
-import signal
 
 os.makedirs("final", exist_ok=True)
 os.makedirs("logs", exist_ok=True)
@@ -227,11 +225,4 @@ def main():
 
 
 if __name__ == '__main__':
-    def sigterm_handler(_signo, _stack_frame):
-        writeLog("Killing Application][{}".format("Thanks! Bye Bye!!!"))
-        sys.exit(0)
-
-    signal.signal(signal.SIGTERM, sigterm_handler)
-    signal.signal(signal.SIGINT, sigterm_handler)
-
     main()
